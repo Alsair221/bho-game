@@ -17,6 +17,8 @@
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Кривые анимации","folderPath":"folders/Кривые анимации.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Наборы плиток","folderPath":"folders/Наборы плиток.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Объекты","folderPath":"folders/Объекты.yy",},
+    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Controllers","folderPath":"folders/Объекты/Controllers.yy",},
+    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Interface","folderPath":"folders/Объекты/Interface.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Последовательности","folderPath":"folders/Последовательности.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Примечания","folderPath":"folders/Примечания.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Пути","folderPath":"folders/Пути.yy",},
@@ -26,8 +28,7 @@
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Спрайты","folderPath":"folders/Спрайты.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Шейдеры","folderPath":"folders/Шейдеры.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Шрифты","folderPath":"folders/Шрифты.yy",},
-    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Interface","folderPath":"folders/Объекты/Interface.yy",},
-    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Controllers","folderPath":"folders/Объекты/Controllers.yy",},
+    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Drawing","folderPath":"folders/Скрипты/Drawing.yy",},
   ],
   "IncludedFiles": [
     {"resourceType":"GMIncludedFile","resourceVersion":"1.0","name":"COMMIT_EDITMSG","CopyToMask":-1,"filePath":"datafiles/.git",},
@@ -76,7 +77,9 @@
   },
   "resources": [
     {"id":{"name":"obj_button","path":"objects/obj_button/obj_button.yy",},},
-    {"id":{"name":"main_font","path":"fonts/main_font/main_font.yy",},},
+    {"id":{"name":"Script1","path":"scripts/Script1/Script1.yy",},},
+    {"id":{"name":"fnt_main_font","path":"fonts/fnt_main_font/fnt_main_font.yy",},},
+    {"id":{"name":"obj_test","path":"objects/obj_test/obj_test.yy",},},
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
   ],
   "RoomOrderNodes": [

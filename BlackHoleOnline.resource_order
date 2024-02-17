@@ -6,6 +6,8 @@
     {"name":"Кривые анимации","order":12,"path":"folders/Кривые анимации.yy",},
     {"name":"Наборы плиток","order":2,"path":"folders/Наборы плиток.yy",},
     {"name":"Объекты","order":9,"path":"folders/Объекты.yy",},
+    {"name":"Controllers","order":2,"path":"folders/Объекты/Controllers.yy",},
+    {"name":"Interface","order":1,"path":"folders/Объекты/Interface.yy",},
     {"name":"Последовательности","order":11,"path":"folders/Последовательности.yy",},
     {"name":"Примечания","order":13,"path":"folders/Примечания.yy",},
     {"name":"Пути","order":4,"path":"folders/Пути.yy",},
@@ -15,8 +17,9 @@
     {"name":"Спрайты","order":1,"path":"folders/Спрайты.yy",},
     {"name":"Шейдеры","order":6,"path":"folders/Шейдеры.yy",},
     {"name":"Шрифты","order":7,"path":"folders/Шрифты.yy",},
-    {"name":"Interface","order":1,"path":"folders/Объекты/Interface.yy",},
-    {"name":"Controllers","order":2,"path":"folders/Объекты/Controllers.yy",},
+    {"name":"Drawing","order":1,"path":"folders/Скрипты/Drawing.yy",},
   ],
-  "ResourceOrderSettings": [],
+  "ResourceOrderSettings": [
+    {"name":"obj_test","order":3,"path":"objects/obj_test/obj_test.yy",},
+  ],
 }
