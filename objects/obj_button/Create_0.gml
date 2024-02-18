@@ -24,6 +24,8 @@ target_direction = 45; //угол от объекта привязки
 draw_target_line = true; //рисовать линию до объекта
 target_pos_x = 0;
 target_pos_y = 0;
+this_pos_x = 0;
+this_pos_y = 0;
 
 action = function() { return true; }
 disabled = false;

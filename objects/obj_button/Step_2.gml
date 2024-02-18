@@ -14,11 +14,19 @@ if (!instance_exists(target)){
 
 //следование за целью
 if (target != -1){
-	x = target.x + lengthdir_x(target_distance, target_direction);
-	y = target.y + lengthdir_y(target_distance, target_direction);
+	if (this_pos_x == 0 && this_pos_y == 0){
+		x = target.x + lengthdir_x(target_distance, target_direction);
+		y = target.y + lengthdir_y(target_distance, target_direction);
+	}
 }else{
 	if (target_pos_x != 0 && target_pos_y != 0){
-		x = target_pos_x + lengthdir_x(target_distance, target_direction);
-		y = target_pos_y + lengthdir_y(target_distance, target_direction);
+		if (this_pos_x == 0 && this_pos_y == 0){
+			x = target_pos_x + lengthdir_x(target_distance, target_direction);
+			y = target_pos_y + lengthdir_y(target_distance, target_direction);
+		}
 	}
+}
+if (this_pos_x != 0 && this_pos_y != 0){
+	x = this_pos_x;
+	y = this_pos_y;
 }

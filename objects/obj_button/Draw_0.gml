@@ -80,7 +80,6 @@ switch(draw_variant){
 //отрисовка линии до объекта цели
 if (draw_target_line && (target != -1 || (target_pos_x != 0 && target_pos_y != 0))){
 	//базовые значения
-	
 	var _circle_target_x = 0;
 	var _circle_target_y = 0;
 	var _circle_x = x;
@@ -118,6 +117,11 @@ if (draw_target_line && (target != -1 || (target_pos_x != 0 && target_pos_y != 0
 		}
 	}
 	
+	
+	var _dop_triangle_l_x = 0;
+	var _dop_triangle_l_y = 0;
+	var _dop_triangle_r_x = 0;
+	var _dop_triangle_r_y = 0;
 	//изменение расстояния для уголка
 	if (abs(_delta_circle_x) < _delta_triangle){ _delta_triangle = abs(_delta_circle_x); }
 	if (abs(_delta_circle_y) < _delta_triangle){ _delta_triangle = abs(_delta_circle_y); }
@@ -143,21 +147,48 @@ if (draw_target_line && (target != -1 || (target_pos_x != 0 && target_pos_y != 0
 	draw_circle(_circle_x, _circle_y, 4, true);
 	draw_circle(_circle_x, _circle_y, 5, true);
 	
+	//линия от цели
 	if (_delta_circle_x > 0){
 		draw_line_width(_circle_target_x + 4, _circle_target_y, 
 			_circle_target_x + _delta_circle_x, _circle_target_y, 2);
-	}else{
+	}else if (_delta_circle_x < 0){
 		draw_line_width(_circle_target_x - 4, _circle_target_y, 
 			_circle_target_x + _delta_circle_x, _circle_target_y, 2);
+	}else{
+		if (_circle_x - _circle_target_x > 0){
+			_dop_triangle_l_x = 4;
+		}else{
+			_dop_triangle_l_x = -4;
+		}
+		if (_circle_y - _circle_target_y > 0){
+			_dop_triangle_l_y = 4;
+		}else{
+			_dop_triangle_l_y = -4;
+		}
+		
 	}
 	
+	//линия от кнопки
 	if (_delta_circle_y < 0){
 		draw_line_width(_circle_x, _circle_y + 4, 
 			_circle_x, _circle_y - _delta_circle_y, 2);
-	}else{
+	}else if (_delta_circle_y > 0){
 		draw_line_width(_circle_x, _circle_y - 4, 
 			_circle_x, _circle_y - _delta_circle_y, 2);
+	}else{
+		if (_circle_x - _circle_target_x > 0){
+			_dop_triangle_r_x = -4;
+		}else{
+			_dop_triangle_r_x = 4;
+		}
+		if (_circle_y - _circle_target_y > 0){
+			_dop_triangle_r_y = -4;
+		}else{
+			_dop_triangle_r_y = 4;
+		}
 	}
-	draw_line_width(_circle_target_x + _delta_circle_x, _circle_target_y, 
-		_circle_x, _circle_y - _delta_circle_y, 2);
+	
+	//косая линия
+	draw_line_width(_circle_target_x + _delta_circle_x + _dop_triangle_l_x, _circle_target_y + _dop_triangle_l_y, 
+		_circle_x + _dop_triangle_r_x, _circle_y - _delta_circle_y + _dop_triangle_r_y, 2);
 }
